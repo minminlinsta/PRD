@@ -1,0 +1,103 @@
+# ============================================================
+# .gitignore —— 通用排除规则（按内容类型分组）
+# 目的：只把源码/文档等“需要版本控制”的内容纳入 Git，
+#       排除工作产物、依赖、私密配置、系统/编辑器文件。
+# ============================================================
+
+# ---------- 项目工作数据（WorkBuddy 本地数据，不入库） ----------
+.workbuddy/
+
+# ---------- 依赖目录 ----------
+node_modules/
+.pnp/
+.pnp.js
+.pnpm-store/
+.npm/
+.yarn/
+vendor/
+bower_components/
+__pycache__/
+.venv/
+venv/
+env/
+.venv*/
+*.egg-info/
+.tox/
+.cache/
+
+# ---------- 构建 / 打包产物 ----------
+dist/
+build/
+out/
+target/
+*.pyc
+*.pyo
+*.class
+*.o
+*.so
+*.dll
+*.exe
+*.obj
+*.lib
+*.dylib
+.coverage
+htmlcov/
+.gradle/
+bin/
+obj/
+
+# ---------- 日志 / 临时文件 ----------
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.cache
+~$*
+.DS_Store
+Thumbs.db
+desktop.ini
+*.pid
+*.seed
+.sass-cache/
+.eslintcache
+.stylelintcache
+
+# ---------- 环境变量 / 密钥（绝不入库） ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.cert
+id_rsa
+id_rsa.pub
+
+# ---------- 编辑器 / IDE ----------
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# ---------- 依赖锁文件（按需取消注释保留） ----------
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+# poetry.lock
+
+# ---------- 大文件 / 媒体（按需取消注释，避免仓库膨胀） ----------
+# *.zip
+# *.tar.gz
+# *.rar
+# *.7z
+# *.mp4
+# *.mov
+# *.pdf
